@@ -58,3 +58,8 @@ spec:
   # keeps the billing route readable in git.)
   modelAuth:
     mode: subscription
+  # The factory hub's help desk page talks to this agent through the gateway's
+  # OpenAI-compatible endpoint (/v1/chat/completions), authenticated by the
+  # gateway token, which only the hub's broker may read (Role in agent-office).
+  http:
+    chatCompletions: true
